@@ -62,29 +62,53 @@ The AI-Powered Book Reader is a cutting-edge application designed to bridge the 
 - **Offline Support**: Client-side caching for uninterrupted reading
 - **Accessibility Features**: High contrast modes, adjustable text sizes, and screen reader support
 
-## 🏗️ Architecture
+## 📸 Demo Images
 
-### High-Level Architecture
+Here are some screenshots of the application:
 
-```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Frontend      │    │   Backend       │    │   AI Services   │
-│   (React)       │◄──►│   (Django)      │◄──►│   (SageMaker)   │
-│                 │    │                 │    │                 │
-│ • S3 + CloudFront│   │ • ECS + ALB     │    │ • TTS Models    │
-│ • IndexedDB     │   │ • Redis Cache   │    │ • TTI Models    │
-│ • Local Storage │   │ • RDS (MySQL)   │    │ • NLP Models    │
-└─────────────────┘    │ • MongoDB       │    └─────────────────┘
-                       └─────────────────┘
-```
+### **Main Page**
+![Main Page](./readme/main.png)
 
-### Data Flow
+### **Single Book Search**
+![Book Search](./readme/book.png)
 
-1. **User Authentication**: Frontend authenticates via Django backend
-2. **Content Retrieval**: Backend fetches books from multiple sources
-3. **AI Processing**: SageMaker endpoints handle TTS, TTI, and summarization
-4. **Caching**: Redis (server-side) and IndexedDB (client-side) optimize performance
-5. **Storage**: MySQL stores metadata, MongoDB stores content, S3 stores media
+### **Review Page**
+![Review Page](./readme/review.png)
+
+### **Library Page**
+![Library Page](./readme/library.png)
+
+### **Reading Page – Text to Speech**
+![Text to Speech](./readme/tts.png)
+
+### **Reading Page – Text to Image**
+![Text to Image](./readme/tti.png)
+
+### **Reading Page – Customization**
+![Customization](./readme/custom.png)
+
+---
+
+## 🎥 Demo Video
+
+Watch the demo here:  
+[![Watch Demo](https://img.shields.io/badge/Google%20Drive-Demo-blue?logo=google-drive)](https://drive.google.com/file/d/14FKU8VqZIHQvHOYBXDzuwVMzam-QA_Y7/view?usp=drive_link)
+
+
+## 🏗️ System Architecture
+
+![System Architecture](./readme/architecture.png)
+
+*(High-level architecture of the system)*
+
+---
+
+## 🔄 Data Flow
+
+![Data Flow](./readme/dataflow.png)
+
+*(End-to-end data flow from input sources to analytics and output)*
+
 
 ## 🛠️ Technology Stack
 
